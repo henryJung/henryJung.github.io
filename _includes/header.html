@@ -38,11 +38,11 @@
           {% endif %}
 
           {% if include.type == "post" %}
-            <span class="post-meta">작성 : {{ page.date | date: date_format }}</span>
+            <span class="post-meta">{{ page.date | date: date_format }} 작성됨</span>
             {% if page.last-updated %}
               <span class="post-meta">
                 <span class="d-none d-md-inline middot">&middot;</span>
-                수정 : {{ page.last-updated | date: date_format }}
+                {{ page.last-updated | date: date_format }} 수정됨
               </span>
             {% endif %}
             {% if page.readtime %}
@@ -72,11 +72,11 @@
           {% endif %}
 
           {% if include.type == "post" %}
-            <span class="post-meta">작성 : {{ page.date | date: date_format }}</span>
+            <span class="post-meta">{{ page.date | date: date_format }} 작성됨</span>
             {% if page.last-updated %}
               <span class="post-meta">
                 <span class="d-none d-md-inline middot">&middot;</span>
-                수정 : {{ page.last-updated | date: date_format }}
+                {{ page.last-updated | date: date_format }} 수정됨
               </span>
             {% endif %}
             {% if page.readtime %}

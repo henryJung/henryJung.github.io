@@ -46,7 +46,7 @@ layout: page
 
         <p class="post-meta">
             {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
-            작성 : {{ post.date | date: date_format }}
+            {{ post.date | date: date_format }} 작성됨
         </p>
 
         {% if thumbnail != "" %}
@@ -72,7 +72,7 @@ layout: page
                 {{ post.excerpt | strip_html | truncatewords: excerpt_length }}
                 {% assign excerpt_word_count = post.excerpt | number_of_words %}
                 {% if post.content != post.excerpt or excerpt_word_count > excerpt_length %}
-                <div class="post-read-more"> [더 보기]</div>
+                <span class="post-read-more"> [더 보기]</span>
                 {% endif %}
             </div>
         </a>
