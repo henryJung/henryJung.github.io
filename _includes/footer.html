@@ -17,13 +17,6 @@
       {% endif %}
       {{ site.time | date: '%Y' }}
 
-      {% if site.url-pretty %}
-        &nbsp;&bull;&nbsp;
-        <span class="author-site">
-          <a href="{% if site.url-canonical %}{{ site.url-canonical }}{% else %}{{ '' | absolute_url }}{% endif %}">{{ site.url-pretty }}</a>
-        </span>
-      {% endif %}
-
       {% if site.matomo %}
         {% if site.matomo.opt-out %}
           &nbsp;&bull;&nbsp;
@@ -32,6 +25,11 @@
       {% endif%}
       </p>
       </div>
+      {% if site.url-pretty %}
+      <div class="author-site">
+          <a href="{% if site.url-canonical %}{{ site.url-canonical }}{% else %}{{ '' | absolute_url }}{% endif %}">{{ site.url-pretty }}</a>
+        </div>
+      {% endif %}
     </div>
   </div>
 </footer>
