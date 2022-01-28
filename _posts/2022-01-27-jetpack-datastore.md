@@ -62,4 +62,4 @@ comments: true
 
 지금까지 **DataStore**의 작동 방식, 변경 사항 및 개선 사항, 두 가지 구현 중에서 결정하는 방법에 대해 자세히 알아보았습니다.
 
-###### 출처 : https://medium.com/androiddevelopers/introduction-to-jetpack-datastore-3dc8d74139e7
+[원본 글](https://medium.com/androiddevelopers/introduction-to-jetpack-datastore-3dc8d74139e7)
