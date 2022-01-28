@@ -2,7 +2,9 @@
 layout: post
 title: Jetpack DataStore 소개
 tags: [android, jetpack, development]
+thumbnail-img: /assets/img/datastore/datastore.png
 cover-img: /assets/img/datastore/android_developers.png
+share-img: /assets/img/datastore/datastore.png
 comments: true
 ---
 `DataStore` 는 기본 설정이나 응용 프로그램 상태와 같은 소량의 데이터를 안전하고 일관되게 저장하는 방법을 제공하는 Jetpack 데이터 저장소 라이브러리입니다. 비동기 데이터 저장을 가능하게 하는 **Kotlin 코루틴과 Flow**를 기반으로 합니다. 스레드로부터 안전하고 차단되지 않기 때문에 `SharedPreferences`를 대체하는 것을 목표로 합니다. 두 가지 다른 구현을 제공합니다. 유형이 지정된 개체([프로토콜 버퍼](https://developers.google.com/protocol-buffers) 지원)를 저장하는 [Proto DataStore](https://developer.android.com/topic/libraries/architecture/datastore?gclid=CjwKCAiA55mPBhBOEiwANmzoQtX8aFaxx5WFTDOpYVN429tF3U8X3BnZu8ZMfJhRqGtyme_PzaypHhoCQDsQAvD_BwE&gclsrc=aw.ds#datastore-typed) 와 키-값 쌍을 저장하는 [Preferences DataStore](https://developer.android.com/topic/libraries/architecture/datastore?gclid=CjwKCAiA55mPBhBOEiwANmzoQtX8aFaxx5WFTDOpYVN429tF3U8X3BnZu8ZMfJhRqGtyme_PzaypHhoCQDsQAvD_BwE&gclsrc=aw.ds#datastore-preferences) 입니다. 앞으로는 `DataStore`를 사용할 때 달리 지정하지 않는 한 두 구현을 모두 참조합니다.
