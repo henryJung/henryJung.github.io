@@ -2,7 +2,6 @@
 layout: post
 title: Kotlin Coroutine으로 비동기 프로그래밍 배우기
 tags: [android, kotlin, coroutine,development]
-cover-img: /assets/img/datastore/android_developers.png
 comments: true
 ---
 Kotlin Coroutine에 대해 공유할 것입니다.
