@@ -50,6 +50,7 @@ suspend fun get(url: String) = withContext(Dispatchers.IO) {
 }
 ```
 
+
 ### 안전을 위한 코루틴
 Kotlin에서 모든 코루틴은 기본 스레드에서 실행 중일 때도 디스패처에서 실행되어야 합니다. 코루틴은 스스로를 일시 중단할 수 있으며 디스패처는 코루틴을 재개할 책임이 있습니다.
 
@@ -59,6 +60,7 @@ Kotlin에서 모든 코루틴은 기본 스레드에서 실행 중일 때도 디
 - **Dispatchers.IO** — 이 디스패처는 기본 스레드 외부에서 디스크 또는 네트워크 I/O를 수행하도록 최적화되어 있습니다. 예를 들어 [Room 구성 요소](https://developer.android.com/topic/libraries/architecture/room) 사용, 파일 읽기 또는 쓰기, 네트워크 작업 실행 등이 있습니다.
 - **Dispatchers.Default** — 이 디스패처는 메인 스레드 외부에서 CPU 집약적인 작업을 수행하도록 최적화되어 있습니다. 사용 사례의 예에는 목록 정렬 및 JSON 구문 분석이 포함됩니다.
 이 블로그 게시물에서는 **DataStore** 의 작동 방식, 제공하는 구현 및 개별 사용 사례에 대해 자세히 살펴보겠습니다. `SharedPreferences` 또한 이것이 가져오는 이점과 개선 사항과 `DataStore`가 가치 있는 이유를 살펴보겠습니다.
+
 
 ## 코루틴 시작하기
 다음 두 가지 방법 중 하나로 코루틴을 시작할 수 있습니다.
