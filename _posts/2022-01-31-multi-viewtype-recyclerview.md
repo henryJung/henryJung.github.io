@@ -3,7 +3,7 @@ layout: post
 title: Android Multi ViewType RecyclerView
 subtitle: RecyclerView에 여러 View를 쉽게 추가할 수 있도록 합니다. 
 gh-repo: henryJung/CleanMvvm
-cover-img: /assets/img/multiviewtype/multi_viewtype_cover.png
+cover-img: /assets/img/mutliviewtype/multi_viewtype_cover.png
 tags: [android, recyclerView, development]
 comments: true
 ---
@@ -16,6 +16,7 @@ RecyclerView에 대한 itemView를 표현 할 때, 여러가지 타입의 뷰를
 
 ---
 #### 1. ListItem.kt
+List에 표현 할 Item은 ListItem을 반드시 참조해야합니다.
 ```kotlin
 interface ListItem {
     val viewType: ViewType
@@ -31,9 +32,9 @@ enum class ViewType {
     BOOK,
 }
 ```
-List에 표현 할 Item은 ListItem을 반드시 참조해야합니다.
 
 #### 2. model(Photo, Book) 
+각 data class는 `ListItem`을 참조하고 미리 정의한 viewType을 지정합니다.
 ```kotlin
 data class Photo(
     val id: String,
@@ -59,9 +60,9 @@ data class Book(
         get() = ViewType.BOOK
 }
 ```
-각 data class는 `ListItem`을 참조하고 미리 정의한 viewType을 지정합니다.
 
 #### 3. BaseViewHolder.kt
+`BaseViewHolder`는 ListAdapter에 들어갈 기본 뷰홀더가 됩니다. `BaseViewHolder`에서는 기본적으로 item, handler에 대한 binding을 담고 있습니다.
 ```kotlin
 abstract class BaseViewHolder(
     private val binding: ViewDataBinding,
@@ -77,17 +78,17 @@ abstract class BaseViewHolder(
     }
 }
 ```
-`BaseViewHolder`는 ListAdapter에 들어갈 기본 뷰홀더가 됩니다. `BaseViewHolder`에서는 기본적으로 item, handler에 대한 binding을 담고 있습니다.
 
 #### 4. ClickType.kt
+`ClickType`은 정의한 ItemView에 대한 공통 click event를 처리하기 위한 Type을 지정합니다.
 ```kotlin
 enum class ClickType {
     Random, Photo, Book
 }
-```
-`ClickType`은 정의한 ItemView에 대한 공통 click event를 처리하기 위한 Type을 지정합니다.  
+``` 
 
 #### 5. BaseRecyclerHandler.kt
+handler를 통한 click event를 해당 class를 통해서 처리하게 됩니다.
 ```kotlin
 open class BaseRecyclerHandler(private val context: Context) {
 
@@ -106,9 +107,9 @@ open class BaseRecyclerHandler(private val context: Context) {
     }
 }
 ```
-handler를 통한 click event를 해당 class를 통해서 처리하게 됩니다.
 
 #### 6. ViewHolderGenerator.kt
+`ViewHolderGenerator`에서는 앞에서 정의한 ViewType에 대한 ViewHolder를 정의하는 class입니다.
 ```kotlin
 object ViewHolderGenerator {
 
@@ -149,9 +150,9 @@ object ViewHolderGenerator {
     }
 }
 ```
-`ViewHolderGenerator`에서는 앞에서 정의한 ViewType에 대한 ViewHolder를 정의하는 class입니다.
 
 #### 7. BaseListAdapter.kt
+`BaseListAdapter`에서는 ListItem을 담기 위한 adapter입니다.
 ```kotlin
 class BaseListAdapter(
     context: Context,
@@ -183,9 +184,9 @@ class BaseListAdapter(
     }
 }
 ```
-`BaseListAdapter`에서는 ListItem을 담기 위한 adapter입니다.
 
 #### 8. ViewHolder
+각 ViewHolder class를 정의합니다.
 ```kotlin
 class PhotoViewHolder(
     binding: ItemPhotoBinding,
@@ -197,7 +198,6 @@ class BookViewHolder(
     handler: BaseRecyclerHandler
 ) : BaseViewHolder(binding, handler)
 ```
-각 ViewHolder class를 정의합니다.
 
 #### 9. item xml을 정의합니다.
 item_photo.xml
@@ -409,6 +409,7 @@ item_book.xml
 ```
 
 #### 10. ViewBindingAdapter.kt
+`BindingAdapter`를 정의합니다. 이 곳에서는 adpater 초기화 및 submitData를 정의합니다.
 ```kotlin
 object ViewBindingAdapter {
 
@@ -453,7 +454,6 @@ fun setVisible(view: View, visible: Boolean) {
     view.isVisible = visible
 }
 ```
-`BindingAdapter`를 정의합니다. 이 곳에서는 adpater 초기화 및 submitData를 정의합니다.
 
 이렇게 되면 RecyclerView에 표현 될 UI는 다음과 같습니다.
 ![multi viewType_result](/assets/img/multiviewtype/viewtype_result.png){: .mx-auto.d-block :}
