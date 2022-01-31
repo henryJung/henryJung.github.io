@@ -3,6 +3,7 @@ layout: post
 title: Android Multi ViewType RecyclerView
 subtitle: RecyclerView의 itemView를 model의 viewType을 가져와 그려주도록 합니다.
 gh-repo: henryJung/CleanMvvm
+cover-img: /assets/img/multiviewtype/multi_viewtype_cover.png
 tags: [android, recyclerView, development]
 comments: true
 ---
