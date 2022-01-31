@@ -11,6 +11,8 @@ comments: true
 
 RecyclerView의 itemView를 model의 viewType을 가져와 그려주도록 합니다.
 
+![multi viewType](/assets/img/mutliviewtype/viewtype_thumbnail.png)
+
 RecyclerView에 대한 itemView를 표현 할 때, 여러가지 타입의 뷰를 그려주고 싶어 할 때가 있습니다. RecyclerView는 Adapter가 관리하는 Data Set의 특정 데이터 항목에 대하여 미리 정의된 View를 통해 스크롤이 있는 List 형식으로 표현할 수 있습니다. 이번 포스팅에서는 한 개의 RecyclerView에서 여러 Type의 View를 정의해놓고 데이터의 타입에 따라 각각 다른 ViewType을 적용시키는 방법을 알아보겠습니다. 
 
 여기에서는 간단하게 Photo와 Book 두가지 타입에 구성되어 있는 List를 표현하겠습니다.
@@ -457,6 +459,6 @@ fun setVisible(view: View, visible: Boolean) {
 ```
 
 이렇게 되면 RecyclerView에 표현 될 UI는 다음과 같습니다.
-![multi viewType_result](/assets/img/multiviewtype/viewtype_result.png){: .mx-auto.d-block :}
+![multi viewType_result](/assets/img/multiviewtype/viewtype_result.png)
 
 추후에 새로운 뷰타입을 추가하려면 `data class`, `ViewType`, `ViewHolder`, `item.xml`만 정의해서 추가하면 새로운 타입을 표현 할 수 있습니다.
