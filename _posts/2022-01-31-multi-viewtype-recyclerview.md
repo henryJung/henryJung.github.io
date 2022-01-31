@@ -4,15 +4,15 @@ title: Android Multi ViewType RecyclerView
 subtitle: RecyclerView에 여러 View를 쉽게 추가할 수 있도록 합니다. 
 gh-repo: henryJung/CleanMvvm
 gh-badge: [star, fork, follow]
-cover-img: /assets/img/mutliviewtype/multi_viewtype_cover.png
-thumbnail-img: /assets/img/mutliviewtype/viewtype_thumbnail.png
+cover-img: /assets/img/multiviewtype/multi_viewtype_cover.png
+thumbnail-img: /assets/img/multiviewtype/viewtype_thumbnail.png
 tags: [android, recyclerView, development]
 comments: true
 ---
 
 RecyclerView의 itemView를 model의 viewType을 가져와 그려주도록 합니다.
 
-![multi viewType](/assets/img/mutliviewtype/viewtype_thumbnail.png)
+![multi viewType](/assets/img/multiviewtype/viewtype_thumbnail.png)
 
 RecyclerView에 대한 itemView를 표현 할 때, 여러가지 타입의 뷰를 그려주고 싶어 할 때가 있습니다. RecyclerView는 Adapter가 관리하는 Data Set의 특정 데이터 항목에 대하여 미리 정의된 View를 통해 스크롤이 있는 List 형식으로 표현할 수 있습니다. 이번 포스팅에서는 한 개의 RecyclerView에서 여러 Type의 View를 정의해놓고 데이터의 타입에 따라 각각 다른 ViewType을 적용시키는 방법을 알아보겠습니다. 
 
