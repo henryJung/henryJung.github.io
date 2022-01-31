@@ -460,7 +460,7 @@ fun setVisible(view: View, visible: Boolean) {
 ```
 
 이렇게 되면 RecyclerView에 표현 될 UI는 다음과 같습니다.
-<img src="./assets/img/multiviewtype/viewtype_result.png" width="300px" height="500px" title="multi viewType_result"/>
+<img src="/assets/img/multiviewtype/viewtype_result.png" width="300px" height="500px" title="multi viewType_result"/>
 
 추후에 새로운 뷰타입을 추가하려면 `data class`, `ViewType`, `ViewHolder`, `item.xml`만 정의해서 추가하면 새로운 타입을 표현 할 수 있습니다.
 
