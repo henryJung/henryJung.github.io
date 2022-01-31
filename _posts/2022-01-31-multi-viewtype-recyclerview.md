@@ -4,6 +4,7 @@ title: Android Multi ViewType RecyclerView
 subtitle: RecyclerView에 여러 View를 쉽게 추가할 수 있도록 합니다. 
 gh-repo: henryJung/CleanMvvm
 cover-img: /assets/img/mutliviewtype/multi_viewtype_cover.png
+thumbnail-img: /assets/img/mutliviewtype/viewtype_thumbnail.png
 tags: [android, recyclerView, development]
 comments: true
 ---
