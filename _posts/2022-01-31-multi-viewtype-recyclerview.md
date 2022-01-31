@@ -463,3 +463,5 @@ fun setVisible(view: View, visible: Boolean) {
 ![multi viewType_result](/assets/img/multiviewtype/viewtype_result.png)
 
 추후에 새로운 뷰타입을 추가하려면 `data class`, `ViewType`, `ViewHolder`, `item.xml`만 정의해서 추가하면 새로운 타입을 표현 할 수 있습니다.
+
+전체 코드는 [GitHub](https://github.com/henryJung/CleanMvvm) 에서 확인 할 수 있습니다.
