@@ -1,5 +1,7 @@
 ---
-layout: post title: Databinding 사용 시, 경우에 따라 View 바인딩 하는 방법 tags: [android, kotlin,development]
+layout: post 
+title: Databinding 사용 시, 경우에 따라 View 바인딩 하는 방법 
+tags: [android, kotlin,development]
 comments: true
 ---
 
@@ -26,6 +28,7 @@ val binding = ListItemBinding.inflate(layoutInflater, viewGroup, false)
 val binding = DataBindingUtil.inflate(layoutInflater, R.layout.list_item, viewGroup, false)
 ```
 
+
 ```kotlin
 //Fragment 예시 
 override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -36,6 +39,7 @@ override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, saved
     return view
 }
 ```
+
 
 ```kotlin
 //Adapter 예시 
@@ -98,3 +102,4 @@ Others 바인딩 클래스를 미리 알 수 없는 경우에는, DataBindingUti
 val viewRoot = LayoutInflater.from(this).inflate(layoutId, parent, attachToParent)
 val binding: ViewDataBinding? = DataBindingUtil.bind(viewRoot)
 ```
+
