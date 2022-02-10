@@ -28,9 +28,8 @@ val binding = ListItemBinding.inflate(layoutInflater, viewGroup, false)
 val binding = DataBindingUtil.inflate(layoutInflater, R.layout.list_item, viewGroup, false)
 ```
 
-
+#### Fragment 예시
 ```kotlin
-//Fragment 예시 
 override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
     val binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
     //or 
@@ -40,9 +39,8 @@ override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, saved
 }
 ```
 
-
+#### Adapter 예시
 ```kotlin
-//Adapter 예시 
 override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
     //View를 넘기는 경우
     val view = LayoutInflater.from(parent.context).inflate(R.layout.item_recyclerview, parent, false)
