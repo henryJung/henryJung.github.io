@@ -3,7 +3,7 @@ title: Android ViewBinding 사용
 subtitle: Activity, Fragment, Dialog, View 및 RecyclerView Holder에서 View Binding을 한 번 사용하는 방법을 설명하려고 합니다.
 gh-repo: henryJung/CleanMvvm
 thumbnail-img: /assets/img/viewbinding/viewbinding_thubmnail.jpeg
-tags: [android, recyclerView, development]
+tags: [android, aac, development]
 ---
 
 ## 개요
